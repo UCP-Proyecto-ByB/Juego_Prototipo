@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &858041835072815256
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 744734954068764319, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_Name
+      value: Tomate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587580385773995354, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3907501461650199765, guid: a9d8cd683b9eddf4d975f3352f51c302, type: 3}
+    - target: {fileID: 3869208852753962606, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: vidaEntregada
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869208852753962606, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: energiaEntregada
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869208852753962606, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: liquidoEntregado
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+--- !u!1 &125455367800186375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 744734954068764319, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
+  m_PrefabInstance: {fileID: 858041835072815256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3529051421113590009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125455367800186375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc44fa3c5b36e444f84101a2ed3f2635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquidoEntregado: 5
+  vidaEntregada: 1.5
+  vitaminas:
+  - vitamina: 5
+    cantidadEntregada: 2
+  - vitamina: 2
+    cantidadEntregada: 1
+  minerales:
+  - mineral: 5
+    cantidadEntregada: 5
+  - mineral: 6
+    cantidadEntregada: 8
+  - mineral: 2
+    cantidadEntregada: 4
