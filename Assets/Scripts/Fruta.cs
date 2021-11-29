@@ -75,4 +75,9 @@ public class Fruta : Consumible
 
         OnConsumido?.Invoke(totalVyM);
     }
+
+    public override void Destruir()
+    {
+        Destroy(gameObject);
+    }
 }
