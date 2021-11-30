@@ -26,4 +26,20 @@ public class ControladorCamara : MonoBehaviour
         }
     }
 
+    private void OnMoverHorizontal(InputValue valor)
+    {
+        float inputMovimientoHorizontal = valor.Get<float>();
+        if (inputMovimientoHorizontal == 0)
+        {
+            return;
+        }
+
+        float desplazamiento = inputMovimientoHorizontal > 0 ? 0.3f : 0.7f;
+
+        foreach (var camara in camaras)
+        {
+            camara.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenX = desplazamiento;
+        }
+    }
+
 }
