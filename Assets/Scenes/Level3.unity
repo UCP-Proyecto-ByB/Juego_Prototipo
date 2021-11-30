@@ -1375,10 +1375,6 @@ PrefabInstance:
       value: CanvasJuego
       objectReference: {fileID: 0}
     - target: {fileID: 2657987220878787549, guid: dc7a09b89bc7c104db3e19c5ca4a261f, type: 3}
-      propertyPath: consumiblesFyV.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2657987220878787549, guid: dc7a09b89bc7c104db3e19c5ca4a261f, type: 3}
       propertyPath: consumiblesFyV.Array.data[0]
       value: 
       objectReference: {fileID: 374422833}
@@ -1390,14 +1386,6 @@ PrefabInstance:
       propertyPath: consumiblesFyV.Array.data[2]
       value: 
       objectReference: {fileID: 991817818}
-    - target: {fileID: 3251783756051210105, guid: dc7a09b89bc7c104db3e19c5ca4a261f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -10.599976
-      objectReference: {fileID: 0}
-    - target: {fileID: 3251783756051210105, guid: dc7a09b89bc7c104db3e19c5ca4a261f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -56.899994
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7a09b89bc7c104db3e19c5ca4a261f, type: 3}
 --- !u!4 &722145299 stripped
@@ -39083,22 +39071,6 @@ PrefabInstance:
       propertyPath: m_ChildCameras.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7914264470025816618, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.106401
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914264470025816618, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.7011884
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914264470025816789, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
-      propertyPath: orthographic size
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914264470591204964, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.3699998
-      objectReference: {fileID: 0}
     - target: {fileID: 7914264470591204965, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -39163,14 +39135,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1475260261}
-    - target: {fileID: 7914264471040191483, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5099998
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914264471583824612, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.7699999
-      objectReference: {fileID: 0}
     - target: {fileID: 7914264471583824613, guid: 49d2c7b51962cbb48b20b98100b0e7ea, type: 3}
       propertyPath: m_BoundingShape2D
       value: 

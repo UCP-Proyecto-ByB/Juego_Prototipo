@@ -10,6 +10,7 @@ public class ControladorPopUpVyM : MonoBehaviour
     [SerializeField] private RectTransform panelPopUp;
     [SerializeField] private TMP_Text textoPlantilla;
     [SerializeField] private List<Fruta> consumiblesFyV;
+    [SerializeField] private float tiempoVisible = 2.0f;
     private RectTransform panelPopUpRect;
 
     private void OnEnable()
@@ -79,7 +80,7 @@ public class ControladorPopUpVyM : MonoBehaviour
     {
         CanvasGroup canvas = panelPopUp.GetComponent<CanvasGroup>();
         canvas.alpha = visible ? 1f : 0f;
-        if (visible) { Invoke(nameof(OcultarDespuesDeMostrar), 1.2f); }
+        if (visible) { Invoke(nameof(OcultarDespuesDeMostrar), tiempoVisible); }
 
     }
 

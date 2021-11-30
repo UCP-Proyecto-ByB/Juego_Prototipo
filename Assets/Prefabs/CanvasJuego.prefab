@@ -856,7 +856,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPopUp: {fileID: 7414232546671950032}
   textoPlantilla: {fileID: 208816022920946647}
-  consumiblesFyV: []
+  consumiblesFyV:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7641731206951128005
 GameObject:
   m_ObjectHideFlags: 0
