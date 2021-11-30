@@ -5,12 +5,13 @@ using UnityEngine;
 public abstract class Enemigo : MonoBehaviour, IDaniador
 {
     [SerializeField] private float danio = 5.0f;
+    [SerializeField] private GameObject explosionPrefab;
 
     public float Danio { get => danio; set => danio = value; }
 
     public void Morir()
     {
-        //Animar muerte
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

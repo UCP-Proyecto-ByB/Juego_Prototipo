@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danio: 5
+  explosionPrefab: {fileID: 4608719374702220999, guid: 1814e0c15c5b2324b9fd8bd0c932cfbf, type: 3}
   mostrarPosicionesRayCasts: 0
   velHorizontal: 2
   puedeMoverse: 1
