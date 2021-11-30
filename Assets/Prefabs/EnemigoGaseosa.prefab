@@ -75,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1742860969
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1661652073030284993, guid: af4abf3ee3440594fb789ff2065274f2, type: 3}
+  m_Sprite: {fileID: -8516189750247450741, guid: 2468b7aac27029246bc277e576c63bd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.575, y: 0.6625}
+    oldSize: {x: 0.4875, y: 0.625}
     newSize: {x: 0.92, y: 1.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63076bfd030fa34f838049ad1766f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  danio: 5
 --- !u!1 &3334405337553357255
 GameObject:
   m_ObjectHideFlags: 0
