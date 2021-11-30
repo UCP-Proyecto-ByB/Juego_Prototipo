@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigo : MonoBehaviour, IDaniador
+public abstract class Enemigo : MonoBehaviour, IDaniador
 {
     [SerializeField] private float danio = 5.0f;
 
