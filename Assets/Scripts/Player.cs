@@ -68,6 +68,10 @@ public class Player : MonoBehaviour
     private float modificadorInputOriginal = 1.0f;
     private float modificadorInputActual;
 
+    public float FuerzaSalto { get => fuerzaSalto; set => fuerzaSalto = value; }
+    public float SaludMaxima { get => saludMaxima; set => saludMaxima = value; }
+    public float SaludActual { get => saludActual; set => saludActual = value; }
+
     //[Header("Managers")]
     //private DatosJuegos datosJuegos;
 
@@ -83,12 +87,12 @@ public class Player : MonoBehaviour
     {
         //datosJuegos.PosRespawnPlayer = transform.position;
         AsignarPosRespawn(transform.position, false);
-        saludActual = saludMaxima;
+        SaludActual = SaludMaxima;
         distanciaRecorrida = 0.0f;
         hidratacionActual = hidratacionMaxima;
         modificadorInputActual = modificadorInputOriginal;
         DatosJuegos.HidratacionActualPlayer = hidratacionActual;
-        DatosJuegos.SaludActualPlayer = saludActual;
+        DatosJuegos.SaludActualPlayer = SaludActual;
         DatosJuegos.PosRespawnPlayer = transform.position;
         hidratacionActual = hidratacionMaxima;
         gravedadOriginal = rBody.gravityScale;
@@ -158,7 +162,7 @@ public class Player : MonoBehaviour
 
         if (presionandoInput && tiempoCoyoteTimer > 0.0f)
         {
-            rBody.velocity = new Vector2(0.0f, fuerzaSalto * modificadorInputActual);
+            rBody.velocity = new Vector2(0.0f, FuerzaSalto * modificadorInputActual);
             controladorSonidos.PlaySaltar();
             controladorAnimaciones.SetBool("estaSaltando", true);
             if (!estaEscalando) { ModificarHidratacion(gastoHidratacionSaltar, 1.0f); }
@@ -293,15 +297,15 @@ public class Player : MonoBehaviour
         PlayerAumentoPuntos?.Invoke(esRegional);
     }
 
-    private void ModificarSalud(float valor)
+    public void ModificarSalud(float valor)
     {
-        saludActual += valor;
-        saludActual = Mathf.Clamp(saludActual, 0.0f, saludMaxima);
-        DatosJuegos.SaludActualPlayer = saludActual;
+        SaludActual += valor;
+        SaludActual = Mathf.Clamp(SaludActual, 0.0f, SaludMaxima);
+        DatosJuegos.SaludActualPlayer = SaludActual;
         PlayerLastimado?.Invoke();
         //PlayerLastimado();
 
-        if (saludActual == 0.0f)
+        if (SaludActual == 0.0f)
         {
             Morir();
         }
@@ -337,9 +341,9 @@ public class Player : MonoBehaviour
 
         //transform.position = posRespawn;
         transform.position = DatosJuegos.PosRespawnPlayer;
-        saludActual = saludMaxima;
+        SaludActual = SaludMaxima;
         hidratacionActual = hidratacionMaxima;
-        DatosJuegos.SaludActualPlayer = saludActual;
+        DatosJuegos.SaludActualPlayer = SaludActual;
         PlayerLastimado();
         controladorAnimaciones.SetTrigger("estaRespawn");
         switchVida(true);
