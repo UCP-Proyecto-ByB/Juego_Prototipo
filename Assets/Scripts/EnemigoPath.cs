@@ -20,13 +20,5 @@ public class EnemigoPath : Enemigo
         {
             transform.Rotate(rotacion * Time.deltaTime);
         }
-        // if (RBody.velocity.x >= 0.0f)
-        // {
-        //     transform.Rotate(rotacion * Time.deltaTime);
-        // }
-        // else
-        // {
-        //     transform.Rotate(-rotacion * Time.deltaTime);
-        // }
     }
 }
