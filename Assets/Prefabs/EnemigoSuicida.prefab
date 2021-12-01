@@ -197,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   danio: 10
   explosionPrefab: {fileID: 4608719374702220999, guid: 1814e0c15c5b2324b9fd8bd0c932cfbf, type: 3}
+  desfaseAtaque: 1
+  esperaAtaque: 0.2
   velocidad: 10
   detectorPlayer: {fileID: 1240541638392363389}
-  radioDetector: 2.98
+  radioDetector: 2.27

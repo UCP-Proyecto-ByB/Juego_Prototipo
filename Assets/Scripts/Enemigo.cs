@@ -4,8 +4,12 @@ using UnityEngine;
 
 public abstract class Enemigo : MonoBehaviour, IDaniador
 {
+    [Header("Ataque")]
     [SerializeField] private float danio = 5.0f;
+
+    [Header("Componentes")]
     [SerializeField] private GameObject explosionPrefab;
+
     private Rigidbody2D rBody;
 
     public float Danio { get => danio; set => danio = value; }

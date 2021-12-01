@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class EnemigoSuicida : Enemigo
 {
+    [Header("Ataque")]
+    [SerializeField] private float desfaseAtaque = 0.5f;
+    [SerializeField] private float esperaAtaque = 0.2f;
+
+    [Header("Stats")]
     [SerializeField] private float velocidad = 2.0f;
+
+    [Header("Componentes")]
     [SerializeField] private CircleCollider2D detectorPlayer;
     [SerializeField] private float radioDetector = 3.0f;
 
@@ -18,12 +25,13 @@ public class EnemigoSuicida : Enemigo
 
     private void Start()
     {
-        rotacion *= RotacionAleatoria();
+        rotacion.z *= RotacionAleatoria();
     }
 
     private void Update()
     {
-        transform.Rotate(rotacion * Time.deltaTime);
+        transform.Rotate(rotacion * velocidad * Time.deltaTime);
+
         if (!playerDetectado) { return; }
 
         transform.position = Vector3.MoveTowards(transform.position, posicionPlayer, velocidad * Time.deltaTime);
@@ -48,7 +56,20 @@ public class EnemigoSuicida : Enemigo
     public void Atacar(Vector3 pos)
     {
         posicionPlayer = pos;
+        rotacion.z *= transform.position.x >= posicionPlayer.x ? -1 : 1;
+        posicionPlayer.x += DesfasarPuntoAtaque(desfaseAtaque);
+        posicionPlayer.y += DesfasarPuntoAtaque(desfaseAtaque);
+        Invoke(nameof(SetearPlayerDetectado), esperaAtaque);
+    }
+
+    private void SetearPlayerDetectado()
+    {
         playerDetectado = true;
+    }
+
+    private float DesfasarPuntoAtaque(float valor)
+    {
+        return UnityEngine.Random.Range(-valor, valor);
     }
 
     private void OnDrawGizmos()
