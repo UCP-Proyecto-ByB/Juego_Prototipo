@@ -17,12 +17,6 @@ public class EnemigoMovimiento : Enemigo
     [SerializeField] private float largoRayCastVacio = 0.1f;
     [SerializeField] private LayerMask capaPlataformas;
     [SerializeField] private GameObject posicionDetectorVacio;
-    // private Rigidbody2D rBody;
-
-    // private void Awake()
-    // {
-    //     rBody = GetComponent<Rigidbody2D>();
-    // }
 
     private void Awake()
     {
