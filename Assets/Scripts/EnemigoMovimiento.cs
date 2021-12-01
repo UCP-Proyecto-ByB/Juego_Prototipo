@@ -17,11 +17,16 @@ public class EnemigoMovimiento : Enemigo
     [SerializeField] private float largoRayCastVacio = 0.1f;
     [SerializeField] private LayerMask capaPlataformas;
     [SerializeField] private GameObject posicionDetectorVacio;
-    private Rigidbody2D rBody;
+    // private Rigidbody2D rBody;
+
+    // private void Awake()
+    // {
+    //     rBody = GetComponent<Rigidbody2D>();
+    // }
 
     private void Awake()
     {
-        rBody = GetComponent<Rigidbody2D>();
+        RBody = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -47,7 +52,7 @@ public class EnemigoMovimiento : Enemigo
     {
         if (!puedeMoverse) { return; }
 
-        rBody.velocity = new Vector2(velHorizontal, rBody.velocity.y);
+        RBody.velocity = new Vector2(velHorizontal, RBody.velocity.y);
     }
 
     private void CambiarPosicionRayCasts()

@@ -10,6 +10,8 @@ public class PathFollow : MonoBehaviour
     private int indicePuntoMovimiento;
     private float rangoCambioPos = 0.05f;
 
+    public int IndicePuntoMovimiento { get => indicePuntoMovimiento; set => indicePuntoMovimiento = value; }
+
     private void Start()
     {
         transform.position = puntosMovimiento[puntoInicio].position;
@@ -24,16 +26,16 @@ public class PathFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, puntosMovimiento[indicePuntoMovimiento].position) < rangoCambioPos)
+        if (Vector2.Distance(transform.position, puntosMovimiento[IndicePuntoMovimiento].position) < rangoCambioPos)
         {
-            indicePuntoMovimiento++;
-            if (indicePuntoMovimiento == puntosMovimiento.Length)
+            IndicePuntoMovimiento++;
+            if (IndicePuntoMovimiento == puntosMovimiento.Length)
             {
-                indicePuntoMovimiento = 0;
+                IndicePuntoMovimiento = 0;
             }
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[indicePuntoMovimiento].position, velocidad * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[IndicePuntoMovimiento].position, velocidad * Time.fixedDeltaTime);
     }
 
 }
