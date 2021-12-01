@@ -280,24 +280,7 @@ public class Player : MonoBehaviour
     {
         ModificarSalud(-danio);
         controladorSonidos.PlayDanio();
-        // saludActual -= danio;
-        // saludActual = Mathf.Clamp(saludActual, 0.0f, saludMaxima);
-        // DatosJuegos.SaludActualPlayer = saludActual;
-        // PlayerLastimado();
-
-        // if (saludActual == 0.0f)
-        // {
-        //     Morir();
-        // }
     }
-
-    // public void TomarVyM(Dictionary<string, float> ListaVyM)
-    // {
-    //     foreach (var item in ListaVyM)
-    //     {
-    //         Debug.Log($"Nombre: {item.Key} - Cantidad: {item.Value}");
-    //     }
-    // }
 
     public void RegenerarSalud(float regeneracion)
     {

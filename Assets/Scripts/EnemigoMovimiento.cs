@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemigoMovimiento : MonoBehaviour
+public class EnemigoMovimiento : Enemigo
 {
     [Header("Debuguers")]
     [SerializeField] private bool mostrarPosicionesRayCasts = false;
@@ -17,11 +17,10 @@ public class EnemigoMovimiento : MonoBehaviour
     [SerializeField] private float largoRayCastVacio = 0.1f;
     [SerializeField] private LayerMask capaPlataformas;
     [SerializeField] private GameObject posicionDetectorVacio;
-    private Rigidbody2D rBody;
 
     private void Awake()
     {
-        rBody = GetComponent<Rigidbody2D>();
+        RBody = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -31,6 +30,8 @@ public class EnemigoMovimiento : MonoBehaviour
 
     private void Update()
     {
+        if (!puedeMoverse) { return; }
+        
         bool tocoPared = Physics2D.Raycast(transform.position, Vector2.right, largoRayCastPared, capaPlataformas);
         bool tocaSuelo = Physics2D.Raycast(posicionDetectorVacio.transform.position, Vector2.down, largoRayCastVacio, capaPlataformas);
 
@@ -45,7 +46,7 @@ public class EnemigoMovimiento : MonoBehaviour
     {
         if (!puedeMoverse) { return; }
 
-        rBody.velocity = new Vector2(velHorizontal, rBody.velocity.y);
+        RBody.velocity = new Vector2(velHorizontal, RBody.velocity.y);
     }
 
     private void CambiarPosicionRayCasts()

@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 5022772959453068747}
   - component: {fileID: 5022772959453068748}
   - component: {fileID: 5022772959453068749}
+  - component: {fileID: 2121256627184204906}
   m_Layer: 6
   m_Name: PlataformaMovilCuerpo
   m_TagString: Untagged
@@ -257,6 +258,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b70054bebb38dd94a94a10175c6e0064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2121256627184204906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022772959453068751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e6996a32c12445b2cc06ef505490f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2

@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: 2587580385773995354, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6625809044397681302, guid: a9d8cd683b9eddf4d975f3352f51c302, type: 3}
+      objectReference: {fileID: 8755591262435691780, guid: 2468b7aac27029246bc277e576c63bd1, type: 3}
     - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc44fa3c5b36e444f84101a2ed3f2635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liquidoEntregado: 2
+  liquidoEntregado: 5
   vidaEntregada: 2
   esRegional: 1
   vitaminas:
