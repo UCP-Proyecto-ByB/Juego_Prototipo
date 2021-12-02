@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
     public float FuerzaSalto { get => fuerzaSalto; set => fuerzaSalto = value; }
     public float SaludMaxima { get => saludMaxima; set => saludMaxima = value; }
     public float SaludActual { get => saludActual; set => saludActual = value; }
+    public float VelHorizontal { get => velHorizontal; set => velHorizontal = value; }
 
     //[Header("Managers")]
     //private DatosJuegos datosJuegos;
@@ -189,7 +190,7 @@ public class Player : MonoBehaviour
 
     private void Correr()
     {
-        Vector2 velocidad = new Vector2(inputMovimientoHorizontal * modificadorInputActual * velHorizontal, rBody.velocity.y);
+        Vector2 velocidad = new Vector2(inputMovimientoHorizontal * modificadorInputActual * VelHorizontal, rBody.velocity.y);
         rBody.velocity = velocidad;
 
         bool estaCorriendo = Mathf.Abs(rBody.velocity.x) > Mathf.Epsilon;
