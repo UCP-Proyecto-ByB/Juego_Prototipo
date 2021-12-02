@@ -151,3 +151,4 @@ MonoBehaviour:
   cantidadFrutas: 8
   tipoFruta: Clase B
   id: ClaseB
+  frutasParaObjetivo: 02000000

@@ -6,6 +6,10 @@ using UnityEngine;
 public class Fruta : Consumible
 {
     public event Action<Dictionary<string, float>> OnConsumido;
+    public event Action<string> OnConsumidoParaObjetivo;
+
+    private enum NombresFrutas { Banana, Manzana, Anana, Uva, Mango, Sandia }
+    [SerializeField] private NombresFrutas nombre;
 
     [System.Serializable]
     private class ConsumibleMinerales
@@ -56,6 +60,7 @@ public class Fruta : Consumible
         player.ModificarHidratacion(LiquidoEntregado);
         player.RegenerarSalud(vidaEntregada);
         player.AumentarPuntaje(puntosEntregados, esRegional);
+        OnConsumidoParaObjetivo?.Invoke(nombre.ToString());
         Invoke(nameof(GenerarListaTotalVyM), 0.05f);
     }
 

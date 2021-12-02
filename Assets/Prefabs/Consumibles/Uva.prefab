@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liquidoEntregado: 2
+  nombre: 3
   vidaEntregada: 5
   esRegional: 0
   vitaminas:

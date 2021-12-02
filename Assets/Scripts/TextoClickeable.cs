@@ -2,12 +2,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class TextoClickeable : MonoBehaviour, IPointerClickHandler
 {
+    private enum Frutas { Banana, Manzana, Anana, Uva, Mango }
+
     [SerializeField] private int cantidadFrutas = 4;
     [SerializeField] private string tipoFruta = "Fruta";
     [SerializeField] private string id = "fruta";
+    [SerializeField] private List<Frutas> frutasParaObjetivo;
 
     private Mouse currentMouse = Mouse.current;
     private TextMeshProUGUI texto;
@@ -15,6 +19,8 @@ public class TextoClickeable : MonoBehaviour, IPointerClickHandler
     private void Awake()
     {
         texto = GetComponent<TextMeshProUGUI>();
+        List<string> frutasString = frutasParaObjetivo.ConvertAll(f => f.ToString());
+        FindObjectOfType<ControladorObjetivos>().RecibirObjetivos(frutasString, cantidadFrutas);
     }
 
     private void Start()
