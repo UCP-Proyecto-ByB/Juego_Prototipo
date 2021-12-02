@@ -90,6 +90,8 @@ public class ControladorPopUpVyM : MonoBehaviour
         ResetearPanel();
     }
 
+
+
     [ContextMenu("Auto completar consumibles")]
     private void AutoCompletarConsumibles()
     {

@@ -10,6 +10,9 @@ public class ControladorCamara : MonoBehaviour
 
     private CinemachineVirtualCamera[] camaras;
     private float screeYOriginal;
+    private bool playerPuedeMoverse;
+
+    public bool PlayerPuedeMoverse { get => playerPuedeMoverse; set => playerPuedeMoverse = value; }
 
     private void Awake()
     {
@@ -19,6 +22,8 @@ public class ControladorCamara : MonoBehaviour
 
     private void OnMoverVertical(InputValue valor)
     {
+        if (!PlayerPuedeMoverse) { return; }
+
         float inputMovimientoVertical = valor.Get<float>();
         foreach (var camara in camaras)
         {
@@ -28,6 +33,8 @@ public class ControladorCamara : MonoBehaviour
 
     private void OnMoverHorizontal(InputValue valor)
     {
+        if (!PlayerPuedeMoverse) { return; }
+
         float inputMovimientoHorizontal = valor.Get<float>();
         if (inputMovimientoHorizontal == 0)
         {
