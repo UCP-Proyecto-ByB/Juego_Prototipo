@@ -30,15 +30,11 @@ public abstract class Consumible : MonoBehaviour
             controladorAnimaciones.SetTrigger("estaConsumida");
             AfectarPlayer(player);
             GetComponent<AudioSource>().Play();
-            // player.ModificarHidratacion(liquidoEntregado);
-            // player.RegenerarSalud(vidaEntregada);
         }
     }
 
     public abstract void AfectarPlayer(Player player);
 
     public abstract void Destruir();
-    // {
-    //     Destroy(gameObject);
-    // }
+
 }
