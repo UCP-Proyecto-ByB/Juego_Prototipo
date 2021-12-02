@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
     //[SerializeField] private GameObject contenedorPlayer;
     [SerializeField] private GameObject detectorSueloDerecha;
     [SerializeField] private GameObject detectorSueloIzquierda;
+    private ControladorCamara controladorCamara;
 
     [Header("Inputs")]
     //Vector2 inputMovimiento;
@@ -81,6 +82,7 @@ public class Player : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         colisionador = GetComponent<BoxCollider2D>();
         controladorSonidos = GetComponent<PlayerControladorSonidos>();
+        controladorCamara = GetComponent<ControladorCamara>();
         //datosJuegos = FindObjectOfType<DatosJuegos>();
     }
 
@@ -304,7 +306,6 @@ public class Player : MonoBehaviour
         SaludActual = Mathf.Clamp(SaludActual, 0.0f, SaludMaxima);
         DatosJuegos.SaludActualPlayer = SaludActual;
         PlayerLastimado?.Invoke();
-        //PlayerLastimado();
 
         if (SaludActual == 0.0f)
         {
@@ -315,9 +316,16 @@ public class Player : MonoBehaviour
     public void EntrarEnPortal()
     {
         DatosJuegos.DistanciaRecorridaEnNivel = ((int)distanciaRecorrida);
-        puedeHacerInput = false;
-        rBody.velocity = Vector2.zero;
+        ModificarControlJugador(false);
         //TODO: anim entrar portal
+    }
+
+    public void ModificarControlJugador(bool puedeControlar)
+    {
+        puedeHacerInput = puedeControlar;
+        controladorCamara.PlayerPuedeMoverse = puedeControlar;
+        rBody.velocity = Vector2.zero;
+        controladorAnimaciones.SetTrigger("estaRespawn");
     }
 
     public void Morir()
