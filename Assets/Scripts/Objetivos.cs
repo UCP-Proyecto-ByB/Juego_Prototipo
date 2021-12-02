@@ -1,7 +1,12 @@
 using UnityEngine;
+using TMPro;
+using System;
 
 public class Objetivos : MonoBehaviour
 {
+    [SerializeField] private TMP_Text[] listaObjetivos;
+    [SerializeField] private RectTransform panelObjetivos;
+
     private GameObject canvasJuego;
     private Player player;
 
@@ -9,6 +14,17 @@ public class Objetivos : MonoBehaviour
     {
         canvasJuego = GameObject.Find("CanvasJuego");
         player = FindObjectOfType<Player>();
+        OrdenarTextosObjetivos();
+    }
+
+    private void OrdenarTextosObjetivos()
+    {
+        foreach (var texto in listaObjetivos)
+        {
+            Transform panel = panelObjetivos.transform;
+
+            var nuevoTexto = Instantiate(texto, panel);
+        }
     }
 
     private void Start()
