@@ -150,4 +150,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadFrutas: 4
   tipoFruta: Clase A
-  id: clase_A
+  id: ClaseA

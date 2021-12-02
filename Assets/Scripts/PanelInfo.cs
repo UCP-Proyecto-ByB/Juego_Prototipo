@@ -6,6 +6,8 @@ public class PanelInfo : MonoBehaviour
 
     private GameObject canvasObjetivos;
 
+    public string Id { get => id; set => id = value; }
+
     private void Awake()
     {
         canvasObjetivos = GameObject.Find("CanvasObjetivos");
@@ -19,6 +21,7 @@ public class PanelInfo : MonoBehaviour
     private void OnDisable()
     {
         canvasObjetivos.SetActive(true);
+        Destroy(transform.parent.gameObject);
     }
 
     public void Cerrar()

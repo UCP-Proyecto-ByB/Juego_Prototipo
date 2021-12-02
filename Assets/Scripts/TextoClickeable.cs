@@ -36,10 +36,8 @@ public class TextoClickeable : MonoBehaviour, IPointerClickHandler
             {
                 //Debug.Log(mousePos);
                 var idLink = texto.textInfo.linkInfo[indiceLink].GetLinkID();
-                //var idLink = infoLink.GetLinkId;
-
                 Debug.Log($"ID: {idLink}");
-                // //Debug.Log($"id {idLink}");
+                FindObjectOfType<CanvasInfo>().MostrarCanvas(idLink);
             }
 
 
