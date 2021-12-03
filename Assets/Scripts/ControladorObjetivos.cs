@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.Events;
+using System;
 
 public class ControladorObjetivos : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class ControladorObjetivos : MonoBehaviour
     }
 
     [SerializeField] private List<Fruta> consumiblesFyV;
-    [SerializeField] private UnityEvent OnObjetivoCompleto;
+    [SerializeField] private List<UnityEvent> OnObjetivoCompleto;
     private List<ObjetivoCumplir> objetivos = new List<ObjetivoCumplir>();
     private int idActual = 0;
 
@@ -50,14 +51,15 @@ public class ControladorObjetivos : MonoBehaviour
         foreach (var objetivo in objetivos)
         {
             //Debug.Log(objetivo.Id);
-            if (objetivo.Frutas.Contains(fruta))
+            if (objetivo.Frutas.Contains(fruta) && objetivo.Cantidad > 0)
             {
-                //Debug.Log("Es parte del objetivo");
+                Debug.Log($"{fruta} es parte del objetivo {objetivo.Id}");
                 objetivo.Cantidad--;
                 if (objetivo.Cantidad == 0)
                 {
-                    OnObjetivoCompleto.Invoke();
-                    objetivos.Remove(objetivo);
+                    int indice = objetivos.IndexOf(objetivo);
+                    OnObjetivoCompleto[indice].Invoke();
+                    //objetivos.Remove(objetivo);
                     break;
                 }
             }

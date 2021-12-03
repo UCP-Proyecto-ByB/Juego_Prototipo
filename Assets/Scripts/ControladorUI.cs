@@ -11,12 +11,15 @@ public class ControladorUI : MonoBehaviour
     [SerializeField] private TMP_Text textoHidratacion;
     [SerializeField] private TMP_Text textoPuntos;
     [SerializeField] private RectTransform panelRegional;
+    [SerializeField] private RectTransform panelObjetivos;
 
     private Player player;
+    private ControladorObjetivos controladorObjetivos;
 
     private void Awake()
     {
         player = FindObjectOfType<Player>();
+        controladorObjetivos = FindObjectOfType<ControladorObjetivos>();
         MostrarPanel(false);
     }
 
@@ -26,6 +29,7 @@ public class ControladorUI : MonoBehaviour
         player.PlayerLastimado += ActualizarTextoSalud;
         player.PlayerModificoHidratacion += ActualizartextoHidratacion;
         player.PlayerAumentoPuntos += ActualizarTextoPuntos;
+        if (controladorObjetivos) { }
     }
 
     private void OnDisable()
@@ -68,6 +72,17 @@ public class ControladorUI : MonoBehaviour
     {
         textoPuntos.text = $"Puntos: {DatosJuegos.PuntosActualesTemp}";
         if (esRegional) { MostrarPanel(true); }
+    }
+
+    public void MostrarPanelObjetivos(int objetivo)
+    {
+        panelObjetivos.gameObject.SetActive(true);
+        Invoke(nameof(OcultarPanelObjetivos), 1.5f);
+    }
+
+    private void OcultarPanelObjetivos()
+    {
+        panelObjetivos.gameObject.SetActive(false);
     }
 
     private void MostrarPanel(bool visible)
