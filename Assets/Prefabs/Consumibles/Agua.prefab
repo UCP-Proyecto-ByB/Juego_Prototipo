@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: 2587580385773995354, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7604668463972655609, guid: a9d8cd683b9eddf4d975f3352f51c302, type: 3}
+      objectReference: {fileID: 21300000, guid: c834a64bdce20f24ba5794b78563aca6, type: 3}
     - target: {fileID: 5763004649958947851, guid: 3077f4fae52d464479a8818cdb58cf45, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -83,3 +83,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liquidoEntregado: 10
+  tiempoRespawn: 8
