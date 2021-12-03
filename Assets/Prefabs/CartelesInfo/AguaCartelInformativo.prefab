@@ -58,7 +58,7 @@ PrefabInstance:
     - target: {fileID: 7675125402755470063, guid: f6aa4efc563ca764fa0dd85576235e22, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4616144251219174747, guid: a9d8cd683b9eddf4d975f3352f51c302, type: 3}
+      objectReference: {fileID: 21300000, guid: c834a64bdce20f24ba5794b78563aca6, type: 3}
     - target: {fileID: 7675125404007864928, guid: f6aa4efc563ca764fa0dd85576235e22, type: 3}
       propertyPath: m_text
       value: El agua constituye el 80% de la mayoria de los organismos, lo que permite

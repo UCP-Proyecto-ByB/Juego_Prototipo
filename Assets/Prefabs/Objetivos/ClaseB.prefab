@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7414f627e0cebbe4c9c6b3f648dfc932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadFrutas: 8
+  cantidadFrutas: 2
   tipoFruta: Clase B
   id: ClaseB
   frutasParaObjetivo: 02000000

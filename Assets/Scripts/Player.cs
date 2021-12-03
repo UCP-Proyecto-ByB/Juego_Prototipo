@@ -249,10 +249,6 @@ public class Player : MonoBehaviour
 
     private void Escalar()
     {
-        //if (!colisionador.IsTouchingLayers(LayerMask.GetMask("Escaleras"))) { return; }
-
-        //Debug.Log("puede escalar");
-
         if (!estaEscalando) { return; }
 
         Vector2 velocidad = new Vector2(rBody.velocity.x, inputMovimientoVertical * modificadorInputActual * velocidadVertical);

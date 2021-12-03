@@ -3,6 +3,7 @@ using UnityEngine;
 public class PowerUpSuperSalto : PowerUp
 {
     [SerializeField] private float potenciadorSalto = 1.5f;
+    
 
     private float fuerzaSaltoOriginal;
 

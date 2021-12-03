@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class PowerUp : MonoBehaviour
 {
     [SerializeField] private float tiempoPowerUp = 5.0f;
+    [SerializeField] private bool activoAlIniciar = true;
 
     private bool powerUpAplicado = false;
     private Animator controladorAnimaciones;
@@ -11,6 +12,14 @@ public abstract class PowerUp : MonoBehaviour
     private void Awake()
     {
         controladorAnimaciones = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        if (!activoAlIniciar)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
