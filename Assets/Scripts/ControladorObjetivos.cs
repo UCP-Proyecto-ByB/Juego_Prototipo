@@ -60,7 +60,7 @@ public class ControladorObjetivos : MonoBehaviour
                     int indice = objetivos.IndexOf(objetivo);
                     OnObjetivoCompleto[indice].Invoke();
                     //objetivos.Remove(objetivo);
-                    break;
+                    //break;
                 }
             }
         }
