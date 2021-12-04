@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class ControladorCamara : MonoBehaviour
 {
     [SerializeField] private float cantidadTransicion = 0.2f;
+    [SerializeField] private float cantidadOffsetHorizontal = 0.2f;
 
     private CinemachineVirtualCamera[] camaras;
     private float screeYOriginal;
@@ -41,7 +42,9 @@ public class ControladorCamara : MonoBehaviour
             return;
         }
 
-        float desplazamiento = inputMovimientoHorizontal > 0 ? 0.3f : 0.7f;
+        //float desplazamiento = inputMovimientoHorizontal > 0 ? 0.3f : 0.7f;
+        float offset = inputMovimientoHorizontal > 0 ? -cantidadOffsetHorizontal : cantidadOffsetHorizontal;
+        float desplazamiento = 0.5f + offset;
 
         foreach (var camara in camaras)
         {

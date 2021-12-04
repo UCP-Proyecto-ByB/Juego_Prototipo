@@ -39066,6 +39066,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749925618959773179, guid: 35aab12a4e4106e44a076103a7c10797, type: 3}
+      propertyPath: cantidadOffsetHorizontal
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5325288680307795952, guid: 35aab12a4e4106e44a076103a7c10797, type: 3}
       propertyPath: m_Name
       value: Player
