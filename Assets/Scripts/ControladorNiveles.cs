@@ -28,9 +28,13 @@ public class ControladorNiveles : MonoBehaviour
         StartCoroutine(CargarNivel(false));
     }
 
-    public void CargarPrimerNivel()
+    public void CargarPrimerNivel(string primerNivel)
     {
-        SceneManager.LoadScene("Level1");
+        if (primerNivel == "")
+        {
+            primerNivel = "Level1";
+        }
+        SceneManager.LoadScene(primerNivel);
     }
 
     IEnumerator CargarNivel(bool actual)
@@ -60,6 +64,10 @@ public class ControladorNiveles : MonoBehaviour
         SceneManager.LoadScene("PostNivel");
     }
 
+    public void Salir()
+    {
+        Application.Quit();
+    }
 
 
 }
