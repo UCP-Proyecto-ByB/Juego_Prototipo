@@ -53,7 +53,7 @@ public class ControladorObjetivos : MonoBehaviour
             //Debug.Log(objetivo.Id);
             if (objetivo.Frutas.Contains(fruta) && objetivo.Cantidad > 0)
             {
-                Debug.Log($"{fruta} es parte del objetivo {objetivo.Id}");
+                //Debug.Log($"{fruta} es parte del objetivo {objetivo.Id}");
                 objetivo.Cantidad--;
                 if (objetivo.Cantidad == 0)
                 {

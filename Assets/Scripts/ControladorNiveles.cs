@@ -60,6 +60,6 @@ public class ControladorNiveles : MonoBehaviour
         SceneManager.LoadScene("PostNivel");
     }
 
-    
+
 
 }

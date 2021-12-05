@@ -38,6 +38,7 @@ public class Objetivos : MonoBehaviour
     {
         canvasJuego.GetComponent<CanvasGroup>().alpha = 1.0f;
         player.ModificarControlJugador(true);
+        Cursor.visible = false;
         this.gameObject.SetActive(false);
     }
 
